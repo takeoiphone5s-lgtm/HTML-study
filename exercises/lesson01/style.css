@@ -1,0 +1,18 @@
+body {
+  background-color: orange;
+}
+h1 {
+  color: white;
+  background-color: yellow;
+}
+p {
+  color: white;
+  font-size: 20px;
+}
+.highlight {
+  background-color: #ff00f2;
+}
+.highlight {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
