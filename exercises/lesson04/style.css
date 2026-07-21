@@ -206,3 +206,12 @@ img {
   color: #888;
   font-size: 12px;
 }
+
+.content-room {
+  max-width: 600px; /* フォームの最大幅 */
+  margin: 50px auto; /* 上下に50pxの余白をとり、左右を中央寄せ */
+  padding: 30px;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
