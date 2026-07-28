@@ -215,3 +215,62 @@ img {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
+
+/* 1. チェックボックス本体は画面から完全に隠す */
+.error-checkbox {
+  display: none;
+}
+
+/* 2. 送信ボタン（label）の見た目を整える */
+.submit-btn-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fefefe;
+  color: rgb(1, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 3. エラーのオーバーレイ（暗い背景）の初期状態：非表示 */
+.error-overlay {
+  display: none; /* 最初は隠す */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒 */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4. エラーメッセージカードの見た目 */
+.error-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+.error-card h2 {
+  color: #ff4d4d;
+  margin-top: 0;
+}
+.close-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ★5. ボタンが押されてチェックが入ったら、オーバーレイを表示する */
+.error-checkbox:checked ~ .error-overlay {
+  display: flex;
+}
