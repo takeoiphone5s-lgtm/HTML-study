@@ -117,13 +117,13 @@
       </div>
     </div>
 
-    <form action="#">
+    <form action="#" input="submit">
       <div class="content-room">
         <h1 class="content-title">お問い合わせ</h1>
         <p>Name</p>
-        <input type="text" placeholder="例　大阪　花子" required />
+        <input type="text" required placeholder="例　大阪　花子" />
         <p>Mail</p>
-        <input type="email" placeholder="例　OCA@mail.com" required />
+        <input type="email" required placeholder="例　OCA@mail.com" />
         <p>Category</p>
         <select name="category">
           <option value="">職業</option>
@@ -138,8 +138,17 @@
         <textarea></textarea>
 
         <p></p>
+        <script>
+          function alert() {
+            let message = [];
+            if ((text = "")) {
+              message.push("名前を入力してください/n");
+            }
+            return;
+          }
+        </script>
 
-        <input type="button" value="送信" onclick="alert(`エラー`)" />
+        <input type="button" value="送信" onclick="alert()" />
       </div>
     </form>
 
