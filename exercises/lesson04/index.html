@@ -121,11 +121,11 @@
       <div class="content-room">
         <h1 class="content-title">お問い合わせ</h1>
         <p>Name</p>
-        <input type="text" required placeholder="例　大阪　花子" />
+        <input id="text" required placeholder="例　大阪　花子" />
         <p>Mail</p>
-        <input type="email" required placeholder="例　OCA@mail.com" />
+        <input id="email" required placeholder="例　OCA@mail.com" />
         <p>Category</p>
-        <select name="category">
+        <select name="category" id="category">
           <option value="">職業</option>
           <option value="office worker">会社員</option>
           <option value="sommelier">ソムリエ</option>
@@ -135,20 +135,43 @@
           <option value="koba">小早川</option>
         </select>
         <p>inquiry</p>
-        <textarea></textarea>
+        <textarea id="textarea"></textarea>
 
         <p></p>
         <script>
-          function alert() {
+          function aaaaaaa() {
+            const text = document.getElementById("text");
+            const email = document.getElementById("email");
+            const category = document.getElementById("category");
+            const textarea = document.getElementById("textarea");
+
+            console.log(text.value);
             let message = [];
-            if ((text = "")) {
-              message.push("名前を入力してください/n");
+            if (text.value == "") {
+              message.push("名前を入力してください");
             }
-            return;
+            if (email.value == "") {
+              message.push("メールアドレスを入力してください");
+            }
+            if (category.value == "") {
+              message.push("職業を選択してください");
+            }
+            if (textarea.value == "") {
+              message.push("要件を入力してください");
+            }
+            if (message.length > 0) {
+              alert(message);
+              return;
+            }
           }
         </script>
 
-        <input type="button" value="送信" onclick="alert()" />
+        <input
+          type="button"
+          id="submit_button"
+          value="送信"
+          onclick="aaaaaaa()"
+        />
       </div>
     </form>
 
